@@ -1,2 +1,3 @@
 # Lab1_ATI
-LAboratorio 1 de ATI 
+
+Proyecto practico de la materia de ATI 
