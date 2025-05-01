@@ -1,5 +1,7 @@
 #cont_img{
-    width: 430px;
+    width: 100%;
+   /* width: 430px;
+    */
     height: 290px;
 }
 #perfil{
@@ -9,7 +11,9 @@
 }
 #header{
     display: flex;
+    flex-direction:row; 
     margin: 30px;
+    font-size: 1em;
 }
 #desc{
     border: 1px solid black;
@@ -126,27 +130,94 @@ footer{
 .input{
     width: 50%;
 }
+
+
 @media (min-width: 320px) and (max-width: 480px) {
-    body {
+    /*body {
         background-color: #de3163;
+    }*/
+    #cont_img {
+        width: 800px;
+        height: 110px;
     }
-}
-    /*481px — 768px*/
-@media (min-width: 481px) and (max-width: 768px) {
-    body {
-        background-color: #6a9dab;
-    }
-}
-/*769px — 1024px:*/
-@media (min-width: 769px) and (max-width: 1024px) {
-    body {
-        background-color: #269c4e;
-    }
-}
-/*1025px — 1200px*/
-@media (min-width: 1025px) and (max-width: 1200px) {
-    body {
-        background-color: #8914bf;
+    #perfil{
+        background-image: url("./img/25129892Pequena.jpg");
+        background-repeat: no-repeat; 
+        background-size: cover;
+        
     }
 }
     
+@media (min-width: 481px) and (max-width: 768px) {
+    /*body {
+        background-color: #6a9dab;
+    }*/
+    #cont_img {
+        width: 800px;
+        height: 190px;
+    }
+    
+    #perfil{
+        background-image: url("./img/25129892Pequena.jpg");
+        background-repeat: no-repeat; 
+        background-size: cover;
+        
+    }
+}
+    
+@media (min-width: 769px) and (max-width: 1024px) {
+    /*body {
+        background-color: #269c4e;
+    }*/
+   /* #header{
+        width: 100%;
+    }*/
+    
+    #perfil{
+        background-image: url("./img/25129892Grande.jpg");
+        background-repeat: no-repeat; 
+        background-size: cover;
+        
+    }
+    /*#cont_img {
+        width: 20%;
+        height: 320px;
+    }*/
+   /* #desc{
+        width: 70%;
+    }*/
+}
+@media (min-width: 1025px) and (max-width: 1200px) {
+    /*body {
+        background-color: #8914bf;
+    }*/
+    
+    #perfil{
+        background-image: url("./img/25129892Grande.jpg");
+        background-repeat: no-repeat; 
+        background-size: cover;
+        
+    }
+    /*
+    #cont_img {
+        width: 490px;
+        height: 310px;
+    }*/
+}
+    
+@media (min-width: 1201px)  {
+    /*body {
+        background-color: #a287af;
+    }*/
+    #cont_img {
+        width: 60%;
+    }
+    
+    #perfil{
+        background-image: url("./img/25129892.jpg");
+        background-repeat: no-repeat; 
+        background-size: cover;
+        
+    }
+    
+}
