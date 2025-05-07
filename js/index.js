@@ -14,6 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         // Asignar valores del JSON al HTML
         console.log(data)
+        
+        const lista = document.getElementById("lista");
+
+        // Agregar cada elemento del array como un li
+        data.forEach(data => {
+            const li = document.createElement("li");
+            li.classList.add("card");
+            li.innerHTML = `
+            <img class="img" src="../reto3/${data.imagen}" alt="${data.nombre}">
+            <p>${data.nombre}</p>
+            `;
+            lista.appendChild(li);
+        });
         //document.getElementById('titulo').textContent = data.perfiles[0]['ci'];
         //document.getElementById('mensaje').textContent = data.mensaje;
       })
