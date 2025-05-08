@@ -3,13 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>ATI[UCV] 2025-1</title>
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-    </style>
-    
+    <script src="js/perfil.js"></script>
     
 </head>
 <body>
@@ -18,12 +15,8 @@
             <img id="perfil" alt="">
         </div>
         <div id="desc">
-            <h2 class="name">Pebelin Hernández Veroes</h2>
-            <p>
-                Soy estudiante de la Licenciatura en Computación en la UCV, actualmente cursando los últimos semestres de la carrera.
-                Desde que comencé la carrera, el Front End fue lo que mas me llamado la atención, esto por el uso de colores y animaciones; que visualmente me gusto mucho. 
-                Esto me motivó a profundizar en el desarrollo web y, gracias a ello, cuento ya con 4 años de experiencia, enfocada principalmente en el Front End.
-            </p>
+            <h2 id="name_" class="name"></h2>
+            <p id="descp"></p>
             <div class="item">
 
                 <div>
@@ -34,14 +27,14 @@
                     <p>Lenguajes aprendidos:</p>
                 </div>
                 <div class="item2">
-                    <p>El morado y los rosa</p>
-                    <p>El Principito</p>
-                    <p>Pop</p>
-                    <p>Ninguno</p>
-                    <p>JavaScript, TypeScript, Python, C, C++ y PHP</p>
+                    <p id="color"></p>
+                    <p id="libr"></p>
+                    <p id="music"></p>
+                    <p id="jugo"></p>
+                    <p id="leng"></p>
                 </div>
             </div>
-            <p>Si necesitan comunicarse conmigo me pueden escribir a: <span  class="email" onclick="cambiarColor()">pebehv@gmail.com</span> </p>
+            <p >Si necesitan comunicarse conmigo me pueden escribir a: <span id="email_" class="email" onclick="cambiarColor()"></span> </p>
         </div>
     </div>
     <script>

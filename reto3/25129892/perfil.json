@@ -1,9 +1,6 @@
-const perfil = {	
+ {	
 	"nombre":"Pebelin Hernández",
-	"descripcion":"Soy estudiante de la Licenciatura en Computación en la UCV, actualmente cursando los últimos semestres de la carrera.
-                Desde que comencé la carrera, el Front End fue lo que mas me llamado la atención, esto por el uso de colores y animaciones; que visualmente me gusto mucho. 
-                Esto me motivó a profundizar en el desarrollo web y, gracias a ello, cuento ya con 4 años de experiencia, enfocada principalmente en el Front End.
-            .",
+	"descripcion":"Soy estudiante de la Licenciatura en Computación en la UCV, actualmente cursando los últimos semestres de la carrera. Desde que comencé la carrera, el Front End fue lo que mas me llamado la atención, esto por el uso de colores y animaciones; que visualmente me gusto mucho. Esto me motivó a profundizar en el desarrollo web y, gracias a ello, cuento ya con 4 años de experiencia, enfocada principalmente en el Front End .",
 	"color": "Morado",
 	"libro": ["El Principito"],
 	"musica": ["Pop"],
