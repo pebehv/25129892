@@ -131,6 +131,10 @@ footer{
     width: 50%;
 }
 
+.p_{
+    text-align: center;
+    color: #5fb5f5;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
     /*body {

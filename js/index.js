@@ -1,7 +1,7 @@
 // js/index.js
 console.log("js*****")
 //const jsonPath = new URL("../data.json", import.meta.url);
-
+let objEst
 document.addEventListener("DOMContentLoaded", () => {
     getLenguaje();
     fetch('../reto3/datos/index.json')
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(data => {
         // Asignar valores del JSON al HTML
         console.log(data)
-        
+        objEst = data
         const lista = document.getElementById("lista");
 
         // Agregar cada elemento del array como un li
@@ -73,4 +73,43 @@ document.addEventListener("DOMContentLoaded", () => {
       .catch(error => {
         console.error('Error al leer el JSON:', error);
       });
+  }
+
+  function getSearch(){
+
+    const inputBusqueda = document.getElementById('busqueda');
+    const resultadoDiv = document.getElementById('lista');
+    const query = inputBusqueda.value.toLowerCase();
+    const estudiantesFiltrados = objEst.filter((estudiante) => 
+        estudiante.nombre.toLowerCase().includes(query)
+    );
+    console.log('buqueda', estudiantesFiltrados)
+    
+    const lista = document.getElementById("lista");
+    lista.innerHTML = '';
+    if(estudiantesFiltrados.length == 0){
+
+      const section = document.getElementById("section");
+      const p = document.createElement("p");
+      p.classList.add("p_");
+      p.textContent = 'No hay alumnos que tengan en su nombre:' + inputBusqueda.value
+      console.log('if')
+      section.appendChild(p);
+    }
+    else{
+      console.log('else')
+
+      // Agregar cada elemento del array como un li
+      estudiantesFiltrados.forEach(data => {
+        
+        console.log('else2')
+          const li = document.createElement("li");
+          li.classList.add("card");
+          li.innerHTML = `
+          <img class="img" src="../reto3/${data.imagen}" alt="${data.nombre}">
+          <p>${data.nombre}</p>
+          `;
+          lista.appendChild(li);
+      });
+    }
   }
