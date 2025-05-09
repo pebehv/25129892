@@ -4,6 +4,7 @@ console.log("js*****")
 //const jsonPath = new URL("../data.json", import.meta.url);
 
 document.addEventListener("DOMContentLoaded", () => {
+  getLenguaje()
     fetch('../reto3/25129892/perfil.json')
       .then(response => {
         if (!response.ok) {
@@ -44,3 +45,47 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
   
+  function getLenguaje(){
+    console.log("get lengujae")
+      
+    const currentUrl = window.location.href;
+    const url = new URL(currentUrl);
+    const params = new URLSearchParams(url.search);
+    let paramsLang = params.get('lang')
+    let lang = 'configES.json'
+    if(paramsLang == 'en'){
+      lang = 'configEN.json'
+    } else if(paramsLang == 'pt'){
+      lang = 'configPT.json'
+    }
+    fetch('../reto3/conf/'+lang)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('No se pudo cargar el archivo JSON');
+        }
+        return response.json();
+      })
+      .then(data => {
+        console.log(":::", data)
+        const colorElement_ = document.getElementById("color_");
+        colorElement_.textContent = data.color
+        const librElement = document.getElementById("libr_");
+        librElement.textContent = data.libro
+        const musicElement = document.getElementById("music_");
+        musicElement.textContent = data.musica
+        const jugoElement = document.getElementById("jugo_");
+        jugoElement.textContent = data.video_juego
+        const lengElement = document.getElementById("leng_");
+        lengElement.textContent = data.lenguajes
+        const emaillElement = document.getElementById("emaill_");
+        const textoOriginal = data.email;
+        
+        //emaillElement.innerHTML  = `${data.email}: <span id="email_" class="email" onclick="cambiarColor()"></span>`;
+        const textoConEmail = textoOriginal.replace('[email]', `<span id="email_" class="email" onclick="cambiarColor()"></span>`);
+        emaillElement.innerHTML  = textoConEmail;
+
+      })
+      .catch(error => {
+        console.error('Error al leer el JSON:', error);
+      });
+  }

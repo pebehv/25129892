@@ -3,6 +3,7 @@ console.log("js*****")
 //const jsonPath = new URL("../data.json", import.meta.url);
 
 document.addEventListener("DOMContentLoaded", () => {
+    getLenguaje();
     fetch('../reto3/datos/index.json')
       .then(response => {
         if (!response.ok) {
@@ -35,3 +36,41 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
   
+
+  function getLenguaje(){
+    console.log("get lengujae")
+      
+    const currentUrl = window.location.href;
+    const url = new URL(currentUrl);
+    const params = new URLSearchParams(url.search);
+    let paramsLang = params.get('lang')
+    let lang = 'configES.json'
+    if(paramsLang == 'en'){
+      lang = 'configEN.json'
+    } else if(paramsLang == 'pt'){
+      lang = 'configPT.json'
+    }
+    fetch('../reto3/conf/'+lang)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('No se pudo cargar el archivo JSON');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const headerElement = document.getElementById("header_");
+        headerElement.innerHTML  = `${data.sitio[0]}<span>[UCV]</span>  2025-1`;
+        
+        const nameElement = document.getElementById("name");
+        nameElement.textContent = data.saludo + ', Pebelin Hernandez'
+        
+        const searchElement = document.getElementById("search_");
+        searchElement.textContent = data.buscar 
+        
+        const footerElement = document.getElementById("footer");
+        footerElement.textContent = data.copyRight 
+      })
+      .catch(error => {
+        console.error('Error al leer el JSON:', error);
+      });
+  }
