@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pebelin Hernández Veroes</title>
+    <title>ATI[UCV] 2025-1</title>
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-    </style>
-     
+    <script src="js/perfil.js"></script>
+    
 </head>
 <body>
     <div id="header"> 
@@ -17,37 +15,26 @@
             <img id="perfil" alt="">
         </div>
         <div id="desc">
-            <h2 class="name">Pebelin Hernández Veroes</h2>
-            <p>
-                Soy estudiante de la Licenciatura en Computación en la UCV, actualmente cursando los últimos semestres de la carrera.
-                Desde que comencé la carrera, el Front End fue lo que mas me llamado la atención, esto por el uso de colores y animaciones; que visualmente me gusto mucho. 
-                Esto me motivó a profundizar en el desarrollo web y, gracias a ello, cuento ya con 4 años de experiencia, enfocada principalmente en el Front End.
-            </p>
-            <!--ul>
-                <li><span> Mi color favorito es:</span>El morado y los rosa</li>
-                <li><span>Mi libro favorito es:  </span> El Principito</li>
-                <li><span>Estilo de música preferida es: </span> Pop </li>
-                <li> <span>Mis Video juegos favoritos son:</span> Ninguno</li>
-                <li> <span>Lenguajes aprendidos:</span> JavaScript, TypeScript, Python, C, C++ y PHP</li>
-            </ul-->
+            <h2 id="name_" class="name"></h2>
+            <p id="descp"></p>
             <div class="item">
 
                 <div>
-                    <p>Mi color favorito es:</p>
-                    <p>Mi libro favorito es:</p>
-                    <p>Estilo de música preferida es:</p>
-                    <p>Mis Video juegos favoritos son:</p>
-                    <p>Lenguajes aprendidos:</p>
+                    <p id="color_"></p>
+                    <p id="libr_"></p>
+                    <p id="music_"></p>
+                    <p id="jugo_"></p>
+                    <p id="leng_"></p>
                 </div>
                 <div class="item2">
-                    <p>El morado y los rosa</p>
-                    <p>El Principito</p>
-                    <p>Pop</p>
-                    <p>Ninguno</p>
-                    <p>JavaScript, TypeScript, Python, C, C++ y PHP</p>
+                    <p id="color"></p>
+                    <p id="libr"></p>
+                    <p id="music"></p>
+                    <p id="jugo"></p>
+                    <p id="leng"></p>
                 </div>
             </div>
-            <p>Si necesitan comunicarse conmigo me pueden escribir a: <span  class="email" onclick="cambiarColor()">pebehv@gmail.com</span> </p>
+            <p id="emaill_" ><span id="email_" class="email" onclick="cambiarColor()"></span> </p>
         </div>
     </div>
     <script>

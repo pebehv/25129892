@@ -7,72 +7,34 @@
     
     <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <style>
-        
-        </style>
+    <link rel="config" type="application/json" href="./reto3/conf/configES.json">
+    <script src="js/index.js"></script>
+    
 </head>
 <body>
+    <h1 id="titulo"></h1>
     <div id="body">
         <header>
             <nav>
                 <ul class="head">
-                    <li class="header">ATI <span>[UCV]</span>  2025-1</li>
-                    <li id="name" class="header">Hola, Pebelin Hernández</li>
+                    <li id="header_" class="header"> </li>
+                    <li id="name" class="header"></li>
                     <li id="search" class="header">
                         <div>
-                            <input class="input" type="text" placeholder="Nombre">
+                            <input id="busqueda" class="input" type="text" placeholder="Nombre">
                             
-                            <button>Buscar</button>
+                            <button id="search_" onclick="getSearch()">Buscar</button>
                         </div>
                     </li>
                 </ul>
             </nav>
         </header>
-        <section>
-            <ul>
-                <li class="card">
-                    <img class="img" src="./img/25129892.jpg" alt="">
-                    <p>Pebelin Hernández</p>
-                </li>
-                <li class="card">
-                    
-                    <img class="img" src="./dummies/dummy1/dummy.jpg" alt="">
-                    <p>Maria Lopez</p>
-                </li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy2/dummy.jpg" alt="">
-                    <p>Margarita Veroes</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy3/dummy.jpg" alt="">
-                    <p>Beatriz Rondon</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy4/dummy.jpg" alt="">
-                    <p>Mario Fernandez</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy5/dummy.jpg" alt="">
-                    <p>Enrique Gomez</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy6/dummy.jpg" alt="">
-                    <p>Jose Reyes</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy1/dummy.jpg" alt="">
-                    <p>Laura Monsa</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy3/dummy.jpg" alt="">
-                    <p>Sofia Vergara</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy5/dummy.jpg" alt="">
-                    <p>David Rodriguez</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy2/dummy.jpg" alt="">
-                    <p>Sandra Vegas</p></li>
-                <li class="card">
-                    <img class="img" src="./dummies/dummy6/dummy.jpg" alt="">
-                    <p>Luis Fernandez</p></li>
+        <section id="section">
+            <ul id="lista">
+               
             </ul>
         </section>
-        <footer>Copyright © 2025 Escuela de computación -
-            ATI. Todos los derechos reservados</footer>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>
