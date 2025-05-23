@@ -1,0 +1,13 @@
+ {	
+	"nombre":"Pebelin Hernández",
+	"descripcion":"Soy estudiante de la Licenciatura en Computación en la UCV, actualmente cursando los últimos semestres de la carrera. Desde que comencé la carrera, el Front End fue lo que mas me llamado la atención, esto por el uso de colores y animaciones; que visualmente me gusto mucho. Esto me motivó a profundizar en el desarrollo web y, gracias a ello, cuento ya con 4 años de experiencia, enfocada principalmente en el Front End .",
+	"color": "Morado",
+	"libro": ["El Principito"],
+	"musica": ["Pop"],
+	"video_juego": ["Ninguno"],
+	"lenguajes": ["JavaScript, TypeScript, Python, C, C++ y PHP"],
+	"email":"pebehv@gmail.com",
+	"ci": "25129892",
+	"genero":"Femenino",
+	"fecha_nacimiento":"23/06/1995"
+}

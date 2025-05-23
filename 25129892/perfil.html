@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATI[UCV] 2025-1</title>
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+    <!--link rel="stylesheet" href="style.css"-->
+    <script src="../js/perfil.js"></script>
+    
+</head>
+<body>
+    <div id="header"> 
+        <div id="cont_img">
+            <img id="perfil" alt="">
+        </div>
+        <div id="desc">
+            <h2 id="name_" class="name"></h2>
+            <p id="descp"></p>
+            <div class="item">
+
+                <div>
+                    <p id="color_"></p>
+                    <p id="libr_"></p>
+                    <p id="music_"></p>
+                    <p id="jugo_"></p>
+                    <p id="leng_"></p>
+                </div>
+                <div class="item2">
+                    <p id="color"></p>
+                    <p id="libr"></p>
+                    <p id="music"></p>
+                    <p id="jugo"></p>
+                    <p id="leng"></p>
+                </div>
+            </div>
+            <p id="emaill_" ><span id="email_" class="email" onclick="cambiarColor()"></span> </p>
+        </div>
+    </div>
+    <script>
+        function cambiarColor() {
+            const texto = document.querySelector('.email');
+            texto.classList.toggle('txt_red');
+        }
+    </script>
+</body>
+</html>
