@@ -1,16 +1,17 @@
-# Utilizar la imagen oficial de Ubuntu
-FROM ubuntu:latest
-
-# Actualizar paquetes y instalar Apache
-RUN apt-get update && apt-get upgrade -y && \
-    apt-get install -y apache2 && \
-    apt-get clean
-
-# Copiar los archivos del proyecto al servidor web de Apache
-# COPY ./25129892 /var/www/html/
-COPY . /var/www/html/
-# Exponer el puerto 80 para acceder al servidor
-EXPOSE 80
-
-# Iniciar Apache en segundo plano
-CMD ["apachectl", "-D", "FOREGROUND"]
+# Utiliza una imagen base con Ubuntu 
+FROM ubuntu:22.04
+# Instala Apache y Python 
+RUN apt-get update && apt-get install -y apache2 python3 python3-pip 
+# Instala uWSGI 
+RUN pip3 install uwsgi 
+# Copia tu aplicación Python al contenedor 
+COPY mi_app.py /var/www/html/  
+#COPY js  /var/www/html/js/  
+COPY . /var/www/html/static/
+#COPY img  /var/www/html/img/  
+COPY reto3  /var/www/html/reto3/  
+#COPY style.css /var/www/html/  
+#COPY my_app/. /usr/src/app/
+# Configura uWSGI para ejecutar tu aplicación 
+CMD ["uwsgi", "--http", "0.0.0.0:80", "--wsgi-file", "/var/www/html/mi_app.py", "--callable", "app", \
+              "--static-map", "/static=/var/www/html/static", "--static-map", "/reto3=/var/www/html/reto3"]
